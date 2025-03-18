@@ -1,0 +1,29 @@
+## Account settings
+set from="sascha.wander@gmail.com"
+set realname="Sascha Wander"
+
+set mbox_type=Maildir
+set folder="~/mail/gmail"
+
+set sendmail="msmtp -a sascha.wander@gmail.com"
+set query_command="abook --mutt-query '%s"
+
+
+# cache settings
+set header_cache="~/.cache/mutt/sascha.wander@gmail.com/header_cache"
+set message_cachedir="~/.cache/mutt/sascha.wander@gmail.com/message_cache"
+
+source ~/.neomutt/color
+
+# mailbox settings
+set spoolfile = +INBOX
+set postponed = +Drafts
+set record = +Sent
+set trash = +Trash
+
+auto_view text/html
+set mailcap_path = ~/.neomutt/mailcap
+
+# keep a list of contacts
+set alias_file = ~/.neomutt/alias
+source $alias_file

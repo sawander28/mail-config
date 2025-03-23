@@ -7,7 +7,7 @@ IMAPAccount gmail
 Host imap.gmail.com
 Port 993
 User sascha.wander@gmail.com
-PassCmd "pass gmail-mutt"
+PassCmd "pass mail/gmail-mutt"
 TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 

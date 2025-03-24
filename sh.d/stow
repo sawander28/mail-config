@@ -1,0 +1,9 @@
+# -*- mode: sh -*-
+
+# Helper functions for installing packages via GNU Stow.
+
+mr_init_stow_package () {
+  : ${STOW_PKG_TYPE:=directory}
+  STOW_NO_AUTOMATIC_ACTIONS=yes
+  set_stow_common_opts
+}

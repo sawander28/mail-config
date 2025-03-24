@@ -1,46 +1,6 @@
 # vim:ft=dosini
 
-[wandsas/dotfiles]
-name = wandsas-dotfiles
-checkout = git clone 'git@rpi3.local:repos/dotfiles.git' 'dotfiles'
 
-[wandsas/desktop-config]
-checkout = git clone 'git@rpi3.local:repos/desktop-config.git' 'desktop-config'
-
-[wandsas/kitenet-mr]
-checkout = git clone 'git@rpi3.local:repos/kitenet-mr.git' 'kitenet-mr'
-
-[wandsas/mr-config]
-checkout = git clone 'git@rpi3.local:repos/mr-config.git' 'mr-config'
-
-[wandsas/mail-config]
-checkout = git clone 'git@rpi3.local:repos/mail-config.git' 'mail-config'
-
-[wandsas/zsh-config]
-checkout = git clone 'git@rpi3.local:repos/zsh-config.git' 'zsh-config'
-
-[wandsas/portage]
-checkout = git clone 'git@rpi3.local:repos/portage.git' 'portage'
-
-# void
-
-[void/hrmpf]
-checkout = git clone 'git@github.com:leahneukirchen/hrmpf.git' 'hrmpf'
-
-[void/void-containers]
-checkout = git clone 'https://github.com/void-linux/void-containers.git' 'void-containers'
-
-[void/void-mklive]
-checkout = git clone 'https://github.com/void-linux/void-mklive.git' 'void-mklive'
-
-[void/void-packages]
-checkout = git clone 'https://github.com/void-linux/void-packages.git' 'void-packages'
-
-[void/xbps]
-checkout = git clone 'https://github.com/void-linux/xbps.git' 'xbps'
-
-[void/ungoogled-chromium-void]
-checkout = git clone 'https://github.com/DAINRA/ungoogled-chromium-void.git' 'ungoogled-chromium-void'
 
 # themes
 
@@ -96,12 +56,6 @@ checkout = git clone 'https://github.com/smaeul/rc.git' 'rc'
 [desktop/sway-config-fedora]
 checkout = git clone 'git@gitlab.com:fedora/sigs/sway/sway-config-fedora.git' 'sway-config-fedora'
 
-[desktop/waybar-cfg]
-checkout = git clone 'https://github.com/HumphreyBoaGart/dotfiles' 'waybar-cfg'
-
-[desktop/waybar-example]
-checkout = git clone 'https://github.com/thatanjan/.dotfiles.git' 'waybar-example'
-
 [desktop/dwl]
 checkout = git clone 'https://codeberg.org/dwl/dwl' 'dwl'
 
@@ -110,7 +64,6 @@ checkout = git clone 'git@github.com:st3r4g/dbus-controllers.git' 'dbus-controll
 
 
 # busybox
-
 [chroot/bubblewrap]
 
 checkout = git clone 'https://github.com/containers/bubblewrap.git' 'bubblewrap'
@@ -162,11 +115,6 @@ checkout = git clone 'https://github.com/tokiclover/dotfiles.git' 'dotfiles'
 [smaeul/dotfiles]
 name = smaeul-dotfiles
 checkout = git clone 'https://github.com/smaeul/dotfiles.git' 'dotfiles'
-
-# openbsd
-
-[openbsd/src]
-checkout = cvs -d 'anoncvs@ftp.hostserver.de:/cvs' co -d 'src' 'src'
 
 [chroot/chimera-install-scripts]
 checkout = git clone 'https://github.com/chimera-linux/chimera-install-scripts.git' 'chimera-install-scripts'

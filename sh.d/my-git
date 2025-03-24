@@ -1,0 +1,9 @@
+# -*- mode: sh -*-
+
+MR_GIT=$HOME/repos
+GIT_MY_ROOT=$MR_GIT/wandsas
+GIT_MY_UPSTREAM=git@rpi3.local:repos
+
+check_repo_name () {
+    [ -n "$MR_NAME" ] || error "\$MR_NAME not set for $MR_REPO"
+}

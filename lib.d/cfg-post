@@ -1,0 +1,3 @@
+# -*- mode: sh -*-
+
+fixups_append = run_cfg_post

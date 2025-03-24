@@ -7,18 +7,18 @@ fixups =
     cd $MR_REPO
     ./configure --prefix=$HOME/.local/share
     make install
-skip = true
+#skip = true
 
 [$HOME/myrepos/cmdline/myrepos]
 checkout = git clone git://myrepos.branchable.com
-skip = true
+#skip = true
 
 [$HOME/myrepos/cmdline/kitenet-mr]
 checkout = git clone git@github.com/aspiers/kitenet-mr.git
-skip = true
+#skip = true
 
 [$HOME/myrepos/cmdline/push]
 checkout = git clone https://github.com/vaeth/push.git $MR_REPO
-skip = true
+#skip = true
 
 

@@ -46,6 +46,9 @@ checkout = git clone git@rpi3.local:repos/mygit.git $MR_REPO
 post_checkout = git remote add github git@github.com:sawander/mygit.git
 stowable = true
 
+[$HOME/myrepos/wandsas/portage]
+checkout = git clone 'git@rpi3.local:repos/portage.git' 'portage'
+
 
 #
 # cmdline

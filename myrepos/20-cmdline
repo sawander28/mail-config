@@ -1,24 +1,28 @@
-# vim:ft=dosini
+# -*- mode: sh -*-
 
-[$HOME/myrepos/cmdline/stow]
+#
+# 20: cmdline apps repository group
+#
+
+[$HOME/repos/cmdline/stow]
 name = stow-release
 checkout = git clone https://git.savannah.gnu.org/git/stow.git
 fixups =
     cd $MR_REPO
     ./configure --prefix=$HOME/.local/share
     make install
-#skip = true
+skip = true
 
-[$HOME/myrepos/cmdline/myrepos]
+[$HOME/repos/cmdline/myrepos]
 checkout = git clone git://myrepos.branchable.com
-#skip = true
+skip = true
 
-[$HOME/myrepos/cmdline/kitenet-mr]
+[$HOME/repos/cmdline/kitenet-mr]
 checkout = git clone git@github.com/aspiers/kitenet-mr.git
-#skip = true
+skip = true
 
-[$HOME/myrepos/cmdline/push]
-checkout = git clone https://github.com/vaeth/push.git $MR_REPO
-#skip = true
+[$HOME/repos/cmdline/push]
+checkout = git clone https://github.com/vaeth/push.git
+skip = true
 
 

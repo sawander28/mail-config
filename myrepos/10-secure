@@ -1,18 +1,22 @@
 # vim:ft=dosini
 
-[$HOME/.gnupg]
+#
+# 10: secured repository group
+#
+
+[~/.gnupg]
 checkout = git clone git@rpi3.local:repos/gnupg-config.git $MR_REPO
 fixups = 
 	find $MR_REPO -type f -exec chmod 600 {} \;
 	find $MR_REPO -type d -exec chmod 700 {} \;
 
-[$HOME/.ssh]
+[~/.ssh]
 checkout = git clone git@rpi3.local:repos/ssh-config.git $MR_REPO
 fixups = 
 	find $MR_REPO -type f -exec chmod 600 {} \;
 	find $MR_REPO -type d -exec chmod 700 {} \;
 
-[$HOME/.password-store]
+[~/.password-store]
 checkout = git clone git@rpi3.local:repos/password-store.git $MR_REPO
 fixups = 
 	find $MR_REPO -type f -exec chmod 600 {} \;

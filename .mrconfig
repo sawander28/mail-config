@@ -4,4 +4,4 @@
 
 [DEFAULT]
 include =
-  cat $HOME/repos/wandsas/mr/myrepos/*
+  cat $HOME/repos/wandsas/mr/repos/*

@@ -72,33 +72,5 @@ stowable = true
 checkout = git clone git@rpi3.local:repos/portage.git
 skip = lazy
 
-#
-# cmdline
-#
-
-[$HOME/repos/cmdline/extrace]
-checkout = git clone https://github.com/leahneukirchen/extrace.git
-clean = rm -f /usr/local/bin/{extrace,pwait}
-remote = git_add_remote rpi3 git@rpi3.local:repos/extrace.git
-fixups = cd $MR_REPO && make install && info "Compiled $STOW_NAME"
-
-[$HOME/repos/cmdline/xe]
-checkout = git clone https://github.com/leahneukirchen/xe.git
-remotes = git_add_remote rpi3 git@rpi3.local:repos/xe.git
-fixups = cd $MR_REPO && make PREFIX=/usr/local install
-
-[$HOME/repos/cmdline/logcatch]
-checkout = git clone https://github.com/leahneukirchen/logcatch.git
-remotes = git_add_remote rpi3 git@rpi3.local:repos/logcatch.git
-fixups = cd $MR_REPO && make PREFIX=/usr/local install
-
-[$HOME/repos/themes/nerd-fonts]
-checkout =
-  info "$MR_REPO"
-  mkdir -p $MR_REPO && cd $MR_REPO
-  curl -LO https://raw.githubusercontent.com/getnf/getnf/main/getnf
-update = :
-fixups = install -m 755 getnf /usr/local/bin
-
 
 # vim: fenc=utf-8 ft=dosini ts=2 sts=2 sw=2 et

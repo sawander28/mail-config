@@ -9,6 +9,7 @@ name = stow-release
 checkout = git clone https://git.savannah.gnu.org/git/stow.git
 fixups =
     cd $MR_REPO
+    [ -f configure ] || autoreconf -fi 
     ./configure --prefix=$HOME/.local/share
     make install
 #skip = true

@@ -12,13 +12,12 @@ fixups =
     [ -f configure ] || autoreconf -fi 
     ./configure --prefix=$HOME/.local/share
     make install
-#skip = true
+skip = true
 
 [$HOME/repos/cmdline/myrepos]
 checkout = git clone ssh://git@rpi3.local/repos/myrepos.git
 remote = git remote add upstream git://myrepos.branchable.com
 fixups = cd $MR_REPO && make PREFIX=/usr/local install && info "Installed $STOW_NAME"
-
 
 [$HOME/repos/cmdline/kitenet-mr]
 checkout = git clone ssh://git@rpi3.local/repos/kitenet-mr.git
@@ -32,19 +31,20 @@ fixups = cd $MR_REPO && make clean && make PREFIX=/usr/local install
 skip = true
 
 [$HOME/repos/cmdline/extrace]
-checkout = git clone https://github.com/leahneukirchen/extrace.git
+checkout = git clone ssh://git@rpi3.local/repos/extrace.git
+remote = git remote add upstream https://github.com/leahneukirchen/extrace.git
 clean = rm -f /usr/local/bin/{extrace,pwait}
 remote = git_add_remote rpi3 git@rpi3.local:repos/extrace.git
 fixups = make install && info "Compiled $STOW_NAME"
 
 [$HOME/repos/cmdline/xe]
-checkout = git clone https://github.com/leahneukirchen/xe.git
-remotes = git_add_remote rpi3 git@rpi3.local:repos/xe.git
+checkout = git clone ssh://git@rpi3.local/repos/xe.git
+remotes = git_add_remote upstream https://github.com/leahneukirchen/xe.git
 fixups = make clean install && info "Installed $STOW_NAME"
 
 [$HOME/repos/cmdline/logcatch]
-checkout = git clone https://github.com/leahneukirchen/logcatch.git
-remotes = git_add_remote rpi3 git@rpi3.local:repos/logcatch.git
+checkout = git clone ssh://git@rpi3.local/repos/logcatch.git
+remotes = git remote add upstream https://github.com/leahneukirchen/logcatch.git
 fixups =  make install && info "Installed $STOW_NAME"
 
 [$HOME/repos/themes/nerd-fonts]

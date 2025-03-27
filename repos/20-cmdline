@@ -21,7 +21,7 @@ skip = true
 
 [$HOME/repos/cmdline/kitenet-mr]
 checkout = git clone git@github.com/aspiers/kitenet-mr.git
-fixups = make PREFIX=/usr/local install && info "Installed $STOW_NAME"
+fixups = make PREFIX=/usr/local install && info "Installed $MR_CONFIG)"
 skip = true
 
 [$HOME/repos/cmdline/push]
@@ -38,12 +38,12 @@ fixups = make install && info "Compiled $STOW_NAME"
 [$HOME/repos/cmdline/xe]
 checkout = git clone https://github.com/leahneukirchen/xe.git
 remotes = git_add_remote rpi3 git@rpi3.local:repos/xe.git
-fixups = make clean install && info "Compiled and installed $STOW_NAME"
+fixups = make clean install && info "Installed $STOW_NAME"
 
 [$HOME/repos/cmdline/logcatch]
 checkout = git clone https://github.com/leahneukirchen/logcatch.git
 remotes = git_add_remote rpi3 git@rpi3.local:repos/logcatch.git
-fixups =  make clean install && info "Compiled and installed $STOW_NAME
+fixups =  make install && info "Installed $STOW_NAME"
 
 [$HOME/repos/themes/nerd-fonts]
 checkout =
@@ -51,8 +51,7 @@ checkout =
   mkdir -p $MR_REPO && cd $MR_REPO
   curl -LO https://raw.githubusercontent.com/getnf/getnf/main/getnf
 update = :
-fixups = install -m 755 getnf /usr/local/bin
-
+fixups = install -m 755 getnf /usr/local/bin && info "Installed $STOW_NAME"
 
 # vim: fenc=utf-8 ft=dosini ts=2 sts=2 sw=2 et
 

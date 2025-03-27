@@ -1,7 +1,9 @@
 # -*- mode: sh -*-
 
 [DEFAULT]
-include = cat /usr/local/lib/stow
+include =
+  cat /usr/local/lib/stow
+  source ${HOME}/lib/functions.sh
 
 lib =
   error(){ printf "\033[1m\033[31mERROR: $@\033[m\n"; exit 1; }
@@ -45,15 +47,18 @@ fixups =
 
 [$HOME/repos/wandsas/shell-env]
 checkout = git clone git@rpi3.local:repos/shell-env.git
+remote = git remote add github ssh://git@github.com/sawander/shell-env.git
 stowable = true
 
 [$HOME/repos/wandsas/mail]
 checkout = git clone git@rpi3.local:repos/mail.git
+remote = git remote add github ssh://git@github.com/sawander/mail.git
 stowable = true
 skip = ! myworkstation
 
 [$HOME/repos/wandsas/vim]
 checkout = git clone git@rpi3.local:repos/vim.git
+remote = git remote add github ssh://git@github.com/sawander/vim.git
 stowable = true
 
 [$HOME/repos/wandsas/sway-desktop]

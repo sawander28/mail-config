@@ -3,6 +3,4 @@
 # This gets loaded via "chain = yes" from ~/.mrconfig
 
 [DEFAULT]
-include =
-  info "Running repos hook"
-  cat $HOME/repos/wandsas/mr/repos/*
+include = cat $HOME/repos/wandsas/mr/repos/*

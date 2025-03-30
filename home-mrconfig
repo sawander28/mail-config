@@ -67,6 +67,7 @@ stowable = true
 [$HOME/repos/wandsas/xorg-desktop]
 checkout = git clone git@rpi3.local:repos/xwayland-desktop.git
 stowable = true
+skip = true
 
 [$HOME/repos/wandsas/mygit]
 checkout = git clone git@rpi3.local:repos/mygit.git

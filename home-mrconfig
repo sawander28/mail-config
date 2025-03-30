@@ -47,7 +47,6 @@ fixups =
 checkout = git clone git@rpi3.local:repos/shell-env.git
 stowable = true
 remote = git remote add github ssh://git@github.com/sawander/shell-env.git
-fixups = echo "pkgtype $STOW_PKG_TYPE"
 
 [$HOME/repos/wandsas/mail]
 checkout = git clone git@rpi3.local:repos/mail.git

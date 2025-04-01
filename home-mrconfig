@@ -33,8 +33,9 @@ lib =
 
 
 [$HOME/repos/wandsas/mr]
+name = mr-config
 order = 1
-checkout = git clone git@rpi3.local:repos/mr.git
+checkout = git clone git@rpi3.local:repos/mr-config.git
 post_checkout =
   cd "MR_REPO && git remote add github git@github.com:sawander/mr-config.git
 # This loads repos/wandsas/mr/.mrconfig

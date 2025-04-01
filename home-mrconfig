@@ -47,17 +47,17 @@ fixups =
 [$HOME/repos/wandsas/shell-env]
 checkout = git clone git@rpi3.local:repos/shell-env.git
 stowable = true
-remote = git remote add github ssh://git@github.com/sawander/shell-env.git
+remotes = git remote add github ssh://git@github.com/sawander/shell-env.git
 
-[$HOME/repos/wandsas/mail]
-checkout = git clone git@rpi3.local:repos/mail.git
-remote = git remote add github ssh://git@github.com/sawander/mail.git
+[$HOME/repos/wandsas/mail-config]
+checkout = git clone git@rpi3.local:repos/mail-config.git
+remotes = git remote add github ssh://git@github.com/sawander/mail-config.git
 stowable = true
 skip = ! myworkstation
 
-[$HOME/repos/wandsas/vim]
-checkout = git clone git@rpi3.local:repos/vim.git
-remote = git remote add github ssh://git@github.com/sawander/vim.git
+[$HOME/repos/wandsas/vim-config]
+checkout = git clone git@rpi3.local:repos/vim-config.git
+remotes = git remote add github ssh://git@github.com/sawander/vim-config.git
 stowable = true
 
 [$HOME/repos/wandsas/sway-desktop]
@@ -65,7 +65,7 @@ checkout = git clone git@rpi3.local:repos/sway-desktop.git
 stowable = true
 
 [$HOME/repos/wandsas/xorg-desktop]
-checkout = git clone git@rpi3.local:repos/xwayland-desktop.git
+checkout = git clone git@rpi3.local:repos/xorg-desktop.git
 stowable = true
 skip = true
 

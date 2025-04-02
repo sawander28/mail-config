@@ -47,7 +47,7 @@ checkout = git clone ssh://git@rpi3.local/repos/logcatch.git
 remotes = git remote add upstream https://github.com/leahneukirchen/logcatch.git
 fixups =  make install && info "Installed $STOW_NAME"
 
-[$HOME/repos/themes/nerd-fonts]
+[$HOME/repos/themes/fonts/nerd-fonts]
 name = getnf
 checkout =
   [ -d $MR_REPO ] || info "Create $MR_REPO"
@@ -56,7 +56,7 @@ checkout =
 update = :
 fixups = install -m 755 getnf /usr/local/bin && info "Installed $MR_NAME"
 
-[$HOME/repos/scripts/get-verified-tarball]
+[$HOME/repos/kernel/get-verified-tarball]
 name = get-verified-tarball
 checkout =
   info "$MR_REPO"

@@ -1,0 +1,20 @@
+
+[$HOME/repos/themes/fluent-gtk-theme]
+checkout = git clone git@rpi3.local:repos/fluent-gtk-theme.git
+remotes = git remote add upstream https://github.com/vinceliuice/Fluent-gtk-theme.git
+
+[$HOME/repos/themes/icons/fluent-icon-theme]
+checkout = git clone git@rpi3.local:repos/fluent-icon-theme.git
+remotes = git remote add upstream https://github.com/vinceliuice/Fluent-icon-theme.git
+
+[$HOME/repos/themes/icons/plan9]
+checkout = git clone git@rpi3.local:repos/plan9.git
+remotes = git remote add upstream https://github.com/wintermute-cell/xcursor-plan9.git
+
+[$HOME/repos/themes/fonts/5x13]
+checkout = git clone git@rpi3.local:repos/5x13.git
+remotes = git remote add upstream https://github.com/leahneukirchen/5x13.git
+
+[$HOME/repos/themes/fonts/5x13]
+checkout = git clone git@rpi3.local:repos/5x13.git
+remotes = git remote add upstream https://github.com/leahneukirchen/5x13.git

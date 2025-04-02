@@ -1,3 +1,4 @@
+# -*- mode: sh -*-
 
 [$HOME/repos/themes/fluent-gtk-theme]
 checkout = git clone git@rpi3.local:repos/fluent-gtk-theme.git
@@ -15,6 +16,7 @@ remotes = git remote add upstream https://github.com/wintermute-cell/xcursor-pla
 checkout = git clone git@rpi3.local:repos/5x13.git
 remotes = git remote add upstream https://github.com/leahneukirchen/5x13.git
 
-[$HOME/repos/themes/fonts/5x13]
-checkout = git clone git@rpi3.local:repos/5x13.git
-remotes = git remote add upstream https://github.com/leahneukirchen/5x13.git
+[$HOME/repos/themes/fonts/codec]
+checkout = git clone git@rpi3.local:repos/codec.git
+
+# vim: fenc=utf-8 ft=sh ts=2 sts=2 sw=2 et

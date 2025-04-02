@@ -48,12 +48,25 @@ remotes = git remote add upstream https://github.com/leahneukirchen/logcatch.git
 fixups =  make install && info "Installed $STOW_NAME"
 
 [$HOME/repos/themes/nerd-fonts]
+name = getnf
 checkout =
-  info "$MR_REPO"
+  [ -d $MR_REPO ] || info "Create $MR_REPO"
   mkdir -p $MR_REPO && cd $MR_REPO
   curl -LO https://raw.githubusercontent.com/getnf/getnf/main/getnf
 update = :
-fixups = install -m 755 getnf /usr/local/bin && info "Installed $STOW_NAME"
+fixups = install -m 755 getnf /usr/local/bin && info "Installed $MR_NAME"
+
+[$HOME/repos/scripts/get-verified-tarball]
+name = get-verified-tarball
+checkout =
+  info "$MR_REPO"
+  [ -d $MR_REPO ] || info "Create $MR_REPO"
+  mkdir -p $MR_REPO && cd $MR_REPO
+  curl -LO https://web.git.kernel.org/pub/scm/linux/kernel/git/mricon/korg-helpers.git/plain/get-verified-tarball
+update = :
+fixups = 
+  install -m 755 get-verified-tarball /usr/local/bin
+  info "Installed $MR_NAME"
+
 
 # vim: fenc=utf-8 ft=dosini ts=2 sts=2 sw=2 et
-

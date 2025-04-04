@@ -68,5 +68,15 @@ fixups =
   install -m 755 get-verified-tarball /usr/local/bin
   info "Installed $MR_NAME"
 
+[$HOME/repos/cmdline/direnv]
+name = direnv
+checkout =
+  [ -d $MR_REPO ] || info "Create $MR_REPO"
+  mkdir -p $MR_REPO && cd $MR_REPO
+  curl -LO https://raw.githubusercontent.com/direnv/direnv/refs/heads/master/install.sh
+update = :
+fixups =
+  bin_path=/usr/local/bin
+  sh install.sh
 
 # vim: fenc=utf-8 ft=dosini ts=2 sts=2 sw=2 et

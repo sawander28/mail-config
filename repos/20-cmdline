@@ -47,35 +47,35 @@ checkout = git clone ssh://git@rpi3.local/repos/logcatch.git
 remotes = git remote add upstream https://github.com/leahneukirchen/logcatch.git
 fixups =  make install && info "Installed $STOW_NAME"
 
-[$HOME/repos/themes/fonts/nerd-fonts]
-name = getnf
-checkout =
-  [ -d $MR_REPO ] || info "Create $MR_REPO"
-  mkdir -p $MR_REPO && cd $MR_REPO
-  curl -LO https://raw.githubusercontent.com/getnf/getnf/main/getnf
-update = :
-fixups = install -m 755 getnf /usr/local/bin && info "Installed $MR_NAME"
-
 [$HOME/repos/kernel/get-verified-tarball]
 name = get-verified-tarball
 checkout =
   info "$MR_REPO"
-  [ -d $MR_REPO ] || info "Create $MR_REPO"
-  mkdir -p $MR_REPO && cd $MR_REPO
+  [ -d $MR_REPO ] || mkdir -p $MR_REPO
+  cd $MR_REPO
   curl -LO https://web.git.kernel.org/pub/scm/linux/kernel/git/mricon/korg-helpers.git/plain/get-verified-tarball
-update = :
-fixups = 
   install -m 755 get-verified-tarball /usr/local/bin
   info "Installed $MR_NAME"
+update = :
+fixups = install -m 755 get-verified-tarball /usr/local/bin
 
 [$HOME/repos/cmdline/direnv]
 name = direnv
 checkout =
-  [ -d $MR_REPO ] || info "Create $MR_REPO"
-  mkdir -p $MR_REPO && cd $MR_REPO
+  [ -d $MR_REPO ] || mkdir -p $MR_REPO
+  cd $MR_REPO
   curl -LO https://raw.githubusercontent.com/direnv/direnv/refs/heads/master/install.sh
-update = :
-fixups =
   bin_path=/usr/local/bin bash install.sh
+update = :
+fixups = bin_path=/usr/local/bin bash install.sh
+
+[$HOME/repos/cmdline/noip-duc]
+name = noip-duc
+checkout =
+  [ -d $MR_REPO ] || mkdir -p $MR_REPO
+  cd $MR_REPO
+  curl -LO https://www.noip.com/download/linux/latest
+update = :
+
 
 # vim: fenc=utf-8 ft=dosini ts=2 sts=2 sw=2 et

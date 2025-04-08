@@ -19,4 +19,13 @@ remotes = git remote add upstream https://github.com/leahneukirchen/5x13.git
 [$HOME/repos/themes/fonts/codec]
 checkout = git clone git@rpi3.local:repos/codec.git
 
+[$HOME/repos/themes/fonts/nerd-fonts]
+name = getnf
+checkout =
+  [ -d $MR_REPO ] || info "Create $MR_REPO"
+  mkdir -p $MR_REPO && cd $MR_REPO
+  curl -LO https://raw.githubusercontent.com/getnf/getnf/main/getnf
+update = :
+fixups = install -m 755 getnf /usr/local/bin && info "Installed $MR_NAME"
+
 # vim: fenc=utf-8 ft=sh ts=2 sts=2 sw=2 et

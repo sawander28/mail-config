@@ -73,12 +73,4 @@ skip = true
 checkout = git clone git@rpi3.local:repos/mygit.git
 stowable = true
 
-[$HOME/repos/wandsas/portage-wandsas]
-checkout = git clone git@rpi3.local:repos/portage-wandsas.git
-skip = true
-
-[$HOME/repos/wandsas/void-inst]
-checkout = git clone git@rpi3.local:repos/void-inst.git
-skip = true
-
 # vim: fenc=utf-8 ft=dosini ts=2 sts=2 sw=2 et

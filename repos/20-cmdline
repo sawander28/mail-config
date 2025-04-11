@@ -57,6 +57,12 @@ checkout =
   install -m 755 get-verified-tarball /usr/local/bin
   info "Installed $MR_NAME"
 update = :
+status =
+  if [ -f /usr/local/bin/get-verified-kernel ]; then
+    info "get-verified-kernel installed to /usr/local"
+  else 
+    warn "get-verified-kernel not installed"
+  fi
 fixups = install -m 755 get-verified-tarball /usr/local/bin
 
 [$HOME/repos/cmdline/direnv]
@@ -67,7 +73,19 @@ checkout =
   curl -LO https://raw.githubusercontent.com/direnv/direnv/refs/heads/master/install.sh
   bin_path=/usr/local/bin bash install.sh
 update = :
+status =
+  if [ -f /usr/local/bin/direnv ];
+    info "direnv installed to /usr/local"
+  else
+    warn "direnv not installed"
+  fi
 fixups = bin_path=/usr/local/bin bash install.sh
+skip = true
+
+[$HOME/repos/cmdline/direnv-git]
+checkout = git clone git@rpi3.local:repos/direnv.git
+remotes = git remote add upstream git@github.com/direnv/direnv.git
+fixups = make install && info "Installed direnv"
 
 [$HOME/repos/cmdline/noip-duc]
 name = noip-duc
@@ -76,6 +94,11 @@ checkout =
   cd $MR_REPO
   curl -LO https://www.noip.com/download/linux/latest
 update = :
-
+status =
+  if [ -f /usr/local/bin/noip-duc ]; then
+    info "noip-duc installed to /usr/local"
+  else
+    warn "noip-duc not installed"
+  fi
 
 # vim: fenc=utf-8 ft=dosini ts=2 sts=2 sw=2 et

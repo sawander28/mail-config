@@ -37,7 +37,7 @@ name = mr-config
 order = 1
 checkout = git clone git@rpi3.local:repos/mr-config.git
 post_checkout =
-  cd "MR_REPO && git remote add github git@github.com:sawander/mr-config.git
+  cd "MR_REPO && git remote add gitlab git@gitlab.com:sawander/mr-config.git
 # This loads repos/wandsas/mr/.mrconfig
 chain = true
 fixups =
@@ -47,30 +47,33 @@ fixups =
 [$HOME/repos/wandsas/shell-env]
 checkout = git clone git@rpi3.local:repos/shell-env.git
 stowable = true
-remotes = git remote add github ssh://git@github.com/sawander/shell-env.git
+remotes = git remote add gitlab ssh://git@gitlab.com/sawander/shell-env.git
 
 [$HOME/repos/wandsas/mail-config]
 checkout = git clone git@rpi3.local:repos/mail-config.git
-remotes = git remote add github ssh://git@github.com/sawander/mail-config.git
+remotes = git remote add gitlab ssh://git@gitlab.com/sawander/mail-config.git
 stowable = true
 skip = ! myworkstation
 
 [$HOME/repos/wandsas/vim-config]
 checkout = git clone git@rpi3.local:repos/vim-config.git
-remotes = git remote add github ssh://git@github.com/sawander/vim-config.git
+remotes = git remote add gitlab ssh://git@gitlab.com/sawander/vim-config.git
 stowable = true
 
 [$HOME/repos/wandsas/sway-desktop]
 checkout = git clone git@rpi3.local:repos/sway-desktop.git
+remotes = git remote add gitlab ssh://git@gitlab.com/sawander/sway-desktop.git
 stowable = true
 
 [$HOME/repos/wandsas/xorg-desktop]
 checkout = git clone git@rpi3.local:repos/xorg-desktop.git
+remotes = git remote add gitlab ssh://git@gitlab.com/sawander/xorg-desktop.git
 stowable = true
 skip = true
 
 [$HOME/repos/wandsas/mygit]
 checkout = git clone git@rpi3.local:repos/mygit.git
+remotes = git remote add gitlab ssh://git@gitlab.com/sawander/mygit.git
 stowable = true
 
 # vim: fenc=utf-8 ft=dosini ts=2 sts=2 sw=2 et

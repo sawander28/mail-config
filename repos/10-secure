@@ -14,17 +14,17 @@ lib =
   }
 
 [$HOME/.gnupg]
-checkout = git clone ssh://git@rpi3.local/repos/sec/gnupg-config.git $MR_REPO
+checkout = git clone ssh://git@rpi3.local/repos/gnupg-config.git $MR_REPO
 fixups = checkprivs
 skip = ! myworkstation
 
 [$HOME/.ssh]
-checkout = git clone ssh://git@rpi3.local/repos/sec/ssh-config.git $MR_REPO
+checkout = git clone ssh://git@rpi3.local/repos/ssh-config.git $MR_REPO
 fixups = checkprivs
 skip = ! myworkstation
 
 [$HOME/.password-store]
-checkout = git clone ssh://git@rpi3.local/repos/sec/password-store.git $MR_REPO
+checkout = git clone ssh://git@rpi3.local/repos/password-store.git $MR_REPO
 fixups = checkprivs 
 skip = ! myworkstation
 

@@ -1,6 +1,0 @@
-# -*- mode: sh -*-
-
-# This gets loaded via "chain = yes" from ~/.mrconfig
-
-[DEFAULT]
-include = cat $HOME/repos/wandsas/mr/repos/*

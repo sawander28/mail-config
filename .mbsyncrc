@@ -15,8 +15,8 @@ IMAPStore gmail-remote
 Account gmail
 
 MaildirStore gmail-local
-Path ~/mail/gmail/
-Inbox ~/mail/gmail/INBOX
+Path ~/maildir/gmail/
+Inbox ~/maildir/gmail/INBOX
 
 Channel gmail-inbox
 Far :gmail-remote:

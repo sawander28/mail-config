@@ -3,7 +3,7 @@ set from="sascha.wander@gmail.com"
 set realname="Sascha Wander"
 
 set mbox_type=Maildir
-set folder="~/mail/gmail"
+set folder="~/maildir/gmail"
 
 set sendmail="msmtp -a sascha.wander@gmail.com"
 set query_command="abook --mutt-query '%s"

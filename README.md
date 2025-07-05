@@ -1,2 +1,2 @@
-### Neomutt/msmtp/mbsync  mail-client config
+# mutt/msmtp/mbsync  mail-client config
 

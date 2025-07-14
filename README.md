@@ -1,2 +1,4 @@
-# mutt/msmtp/mbsync  mail-client config
+- Mutt Mail-User-Agent
+- MSMTP Mail-Transfer-Agent
+- mbSync Offline Imap Sync
 

@@ -1,28 +1,61 @@
-## Account settings
-set from="sascha.wander@gmail.com"
 set realname="Sascha Wander"
+alternates "^/sascha.wander@gmail.com|sawander28@outlook.com)$"
 
-set mbox_type=Maildir
-set folder="~/maildir/gmail"
+# show mutt version at start
+push <show-version>
 
-set sendmail="msmtp -a sascha.wander@gmail.com"
-set query_command="abook --mutt-query '%s"
+set charset = "utf-8"
+set send_charset = "utf-8"
 
+set header_cache="~/.mutt/cache/sascha.wander@gmail.com/headers"
+set message_cachedir="~/.mutt/cache/sascha.wander@gmail.com/bodies"
+set certificate_file = "~/.mutt/certificates"
 
-# cache settings
-set header_cache="~/.cache/mutt/sascha.wander@gmail.com/header_cache"
-set message_cachedir="~/.cache/mutt/sascha.wander@gmail.com/message_cache"
+# This prevents mutt from endlessly asking when you quit
+# "Move read messages to ~/mbox? /[no]/yes):"
+set move = no
 
-source ~/.mutt/color
+# If you start mutt and several new messages are in your inbox and you close
+# mutt before you have read them, then those messages will get flagged as old
+# (by default). The behavior can be controlled via the mark_old configuration variable.
+set mark_old = no
 
-# mailbox settings
-set spoolfile = +INBOX
-set postponed = +Drafts
-set record = +Sent
-set trash = +Trash
+set include = yes
+set quit = yes
+set arrow_cursor = no
+set delete = yes
+set user_agent = yes
 
+set abort_nosubject = yes
+
+# check for unread, flagged, and total message counts
+set mail_check_stats = yes
+# 60 secs
+set mail_check_stats_interval = 60
+
+set sort = threads
+set sort_aux = last-date-received
+
+# personal variables, starts with my_
+# to display variable value on mutt:
+# type : set ?variable_name
+set my_test = "hihi"
+
+set hdr_format = "%4C %Z %{%b %d} %-15.15n (%4l) %s"
+
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+# -*- E-Mail-Accounts -*-
+source ~/.mutt/gmail.com
+source ~/.mutt/outlook.com
+
+# theme
+source ~/.mutt/colors
+
+# default filetypes
 auto_view text/html
-set mailcap_path = ~/.neomutt/mailcap
+set mailcap_path = ~/.mutt/mailcap
 
 # keep a list of contacts
 set alias_file = ~/.mutt/alias
